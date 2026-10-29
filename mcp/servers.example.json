@@ -1,0 +1,44 @@
+{
+  "mcpServers": {
+    "frida-android": {
+      "command": "PYTHON_EXE",
+      "args": ["-m", "frida_android_mcp"],
+      "env": {
+        "FRIDA_HOST": "",
+        "FRIDA_DEVICE": "usb"
+      }
+    },
+    "jadx-android": {
+      "command": "PYTHON_EXE",
+      "args": ["-m", "jadx_mcp", "--jadx-dir", "JADX_DIR"],
+      "env": {}
+    },
+    "x64dbg": {
+      "command": "PYTHON_EXE",
+      "args": ["-m", "x64dbg_mcp"],
+      "env": {
+        "X64DBG_PATH": "X64DBG_DIR"
+      }
+    },
+    "js-reverse": {
+      "command": "NODE_EXE",
+      "args": ["REPLACE_ME/js-reverse-mcp/dist/index.js"],
+      "env": {
+        "BROWSER": "chrome",
+        "HEADLESS": "true"
+      }
+    },
+    "camoufox-reverse": {
+      "command": "PYTHON_EXE",
+      "args": ["-m", "camoufox_reverse_mcp"],
+      "env": {}
+    },
+    "miniapp-reverse": {
+      "command": "NODE_EXE",
+      "args": ["REPLACE_ME/miniapp-reverse-mcp/dist/index.js"],
+      "env": {
+        "CDP_ENDPOINT": "http://127.0.0.1:62000"
+      }
+    }
+  }
+}
